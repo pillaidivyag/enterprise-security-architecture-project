@@ -1,0 +1,1 @@
+# Security Architecture Assessment of a Nextcloud Enterprise Deployment
