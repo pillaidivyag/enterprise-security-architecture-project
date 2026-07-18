@@ -219,9 +219,6 @@
                 <mxCell id="109" value="" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=none;" vertex="1" parent="1">
                     <mxGeometry x="440" y="310" width="880" height="360" as="geometry"/>
                 </mxCell>
-                <mxCell id="114" value="" style="shape=image;html=1;verticalLabelPosition=bottom;verticalAlign=top;imageAspect=1;aspect=fixed;image=img/clipart/Gear_128x128.png" vertex="1" parent="1">
-                    <mxGeometry x="1150" y="660" width="52" height="61" as="geometry"/>
-                </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
