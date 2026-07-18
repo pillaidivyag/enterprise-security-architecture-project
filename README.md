@@ -1,4 +1,3 @@
-# enterprise-security-architecture-project
 # Enterprise Security Architecture Assessment – Nextcloud Enterprise
 
 ## About this project
