@@ -44,54 +44,44 @@ enterprise-security-architecture-project/
 │
 ├── README.md
 │
-├── 01-Business-Requirements/
-│   ├── Business-Requirements.md
-│   ├── Stakeholders.md
-│   ├── Assumptions-and-Constraints.md
-│   └── Security-Objectives.md
-│
-├── 02-Architecture/
+├── 01-Architecture
 │   ├── README.md
-│   ├── Design-Documents/
+│   ├── Design-Documents
+│   │   ├── Business-Requirements.md
+│   │   ├── Security-Objectives.md
 │   │   ├── Deployment-Model.md
 │   │   ├── Security-Requirements.md
 │   │   ├── Trust-Boundaries.md
-│   │   ├── Data-Flow.md
 │   │   └── Technology-Selection.md
 │   │
-│   ├── Architecture-Decisions/
-│   │   ├── ADR-001-Deployment-Model.md
-│   │   ├── ADR-002-Database-Selection.md
-│   │   ├── ADR-003-Reverse-Proxy.md
-│   │   └── ADR-004-Authentication.md
+│   ├── Architecture-Decisions
+│   │   └── ADR-001-Deployment-Model.md
 │   │
-│   └── Diagrams/
+│   └── Diagrams
 │       ├── High-Level-Architecture.drawio
 │       ├── High-Level-Architecture.png
 │       ├── Data-Flow-Diagram.drawio
 │       ├── Data-Flow-Diagram.png
-│       └── Trust-Boundary-Diagram.drawio
+│       ├── Trust-Boundary.drawio
+│       └── Trust-Boundary.png
 │
-├── 03-Threat-Model/
+├── 02-Threat-Model
 │   ├── README.md
 │   ├── STRIDE-Analysis.md
-│   ├── Attack-Surface.md
-│   ├── Threat-Scenarios.md
-│   ├── Mitigation-Plan.md
-│   └── Diagrams/
-│       ├── Threat-Model.drawio
-│       └── Threat-Model.png
+│   ├── Threat-Modelling-Methodology.md
+│   └── Threat-Register.md
 │
-├── 04-Risk-Assessment/
+├── 03-Risk-Assessment
 │   ├── README.md
 │   ├── Risk-Assessment-Methodology.md
 │   ├── Risk-Register.md
+│   ├── Risk Treatment Plan.md
 │   ├── Risk-Matrix.md
-│   └── Diagrams/
+│   └── Diagrams
 │       ├── Risk-Matrix.drawio
 │       └── Risk-Matrix.png
 │
-├── 05-Security-Controls/
+├── 04-Security-Controls
 │   ├── README.md
 │   ├── Identity-and-Access-Management.md
 │   ├── Data-Protection.md
@@ -102,70 +92,71 @@ enterprise-security-architecture-project/
 │   ├── Security-Control-Matrix.md
 │   └── Architecture-Control-Summary.md
 │
-├── 06-Implementation/
+├── 05-Validation
 │   ├── README.md
-│   ├── Environment-Setup.md
-│   ├── Ubuntu-Hardening.md
-│   ├── PostgreSQL-Setup.md
-│   ├── Nginx-Configuration.md
-│   ├── PHP-Configuration.md
-│   ├── Nextcloud-Installation.md
-│   ├── SSL-TLS-Configuration.md
-│   ├── UFW-Firewall.md
-│   ├── Fail2Ban.md
-│   ├── MFA-Configuration.md
-│   ├── Backup-and-Recovery.md
-│   └── Scripts/
-│       ├── install-nextcloud.sh
-│       ├── backup.sh
-│       └── restore.sh
-│
-├── 07-Validation/
-│   ├── README.md
-│   ├── Security-Testing-Plan.md
+│   ├── Validation-Strategy.md
+│   ├── Security-Test-Cases.md
 │   ├── Validation-Checklist.md
+│   ├── Security-Control-Validation.md
 │   ├── Vulnerability-Assessment.md
 │   ├── Penetration-Testing.md
-│   ├── Security-Compliance.md
-│   ├── Lessons-Learned.md
-│   └── Reports/
+│   ├── Configuration-Review.md
+│   ├── Validation-Summary.md
+│   ├── Diagrams
+│   │   └── Validation-Workflow.drawio
+│   └── Reports
 │       ├── Nmap-Scan.md
 │       ├── OWASP-ZAP.md
 │       ├── Nikto.md
 │       └── Lynis.md
 │
-├── 08-Evidence/
-│   ├── Screenshots/
-│   │   ├── Ubuntu-Desktop.png
-│   │   ├── PostgreSQL-Service.png
-│   │   ├── Nginx-Running.png
-│   │   ├── Nextcloud-Login.png
-│   │   ├── HTTPS-Certificate.png
-│   │   ├── MFA.png
-│   │   ├── Firewall-Rules.png
-│   │   ├── Fail2Ban.png
-│   │   ├── Audit-Logs.png
-│   │   └── Backup-Success.png
-│   │
-│   ├── Vulnerability-Scans/
-│   │   ├── nmap.xml
-│   │   ├── zap-report.html
-│   │   ├── nikto.txt
-│   │   └── lynis-report.dat
-│   │
-│   └── Logs/
-│       ├── nginx.log
-│       ├── auth.log
-│       └── nextcloud.log
-│
-├── 09-Documentation/
-│   ├── Project-Summary.md
-│   ├── Security-Architecture-Report.md
-│   ├── Operations-Guide.md
-│   ├── Incident-Response-Guide.md
-│   └── Future-Improvements.md
-│
-└── .gitignore
+├── 06-Implementation
+│   ├── README.md
+│   ├── Environment-Preparation.md
+│   ├── Ubuntu-Hardening.md
+│   ├── PostgreSQL-Configuration.md
+│   ├── Nginx-Configuration.md
+│   ├── PHP-Configuration.md
+│   ├── Nextcloud-Installation.md
+│   ├── SSL-TLS-Configuration.md
+│   ├── Firewall-Configuration.md
+│   ├── Fail2Ban-Configuration.md
+│   ├── Nextcloud-Hardening.md
+│   ├── Backup-and-Recovery.md
+│   ├── Scripts
+│   │   ├── backup.sh
+│   │   ├── restore.sh
+│   │   └── install-notes.md
+│   └── Configuration
+│       ├── nginx.conf
+│       ├── php.ini
+│       ├── nextcloud-config.php
+│       ├── ufw-rules.txt
+│       └── fail2ban-jail.local
+|
+└── 06-Implementation
+│   ├── README.md
+│   ├── Environment-Preparation.md
+│   ├── Ubuntu-Hardening.md
+│   ├── PostgreSQL-Configuration.md
+│   ├── Nginx-Configuration.md
+│   ├── PHP-Configuration.md
+│   ├── Nextcloud-Installation.md
+│   ├── SSL-TLS-Configuration.md
+│   ├── Firewall-Configuration.md
+│   ├── Fail2Ban-Configuration.md
+│   ├── Nextcloud-Hardening.md
+│   ├── Backup-and-Recovery.md
+│   ├── Scripts
+│   │   ├── backup.sh
+│   │   ├── restore.sh
+│   │   └── install-notes.md
+│   └── Configuration
+│       ├── nginx.conf
+│       ├── php.ini
+│       ├── nextcloud-config.php
+│       ├── ufw-rules.txt
+│       └── fail2ban-jail.local
 ```
 
 ---
