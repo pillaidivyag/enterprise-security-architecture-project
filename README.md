@@ -133,30 +133,7 @@ enterprise-security-architecture-project/
 │       ├── nextcloud-config.php
 │       ├── ufw-rules.txt
 │       └── fail2ban-jail.local
-|
-└── 06-Implementation
-│   ├── README.md
-│   ├── Environment-Preparation.md
-│   ├── Ubuntu-Hardening.md
-│   ├── PostgreSQL-Configuration.md
-│   ├── Nginx-Configuration.md
-│   ├── PHP-Configuration.md
-│   ├── Nextcloud-Installation.md
-│   ├── SSL-TLS-Configuration.md
-│   ├── Firewall-Configuration.md
-│   ├── Fail2Ban-Configuration.md
-│   ├── Nextcloud-Hardening.md
-│   ├── Backup-and-Recovery.md
-│   ├── Scripts
-│   │   ├── backup.sh
-│   │   ├── restore.sh
-│   │   └── install-notes.md
-│   └── Configuration
-│       ├── nginx.conf
-│       ├── php.ini
-│       ├── nextcloud-config.php
-│       ├── ufw-rules.txt
-│       └── fail2ban-jail.local
+
 ```
 
 ---
