@@ -4,6 +4,26 @@
 
 This repository documents a complete security architecture assessment for an enterprise deployment of Nextcloud.
 
+Architecture
+↓
+
+Threat Model
+↓
+
+Risk Assessment
+↓
+
+Security Controls
+↓
+
+Implementation
+↓
+
+Validation
+↓
+
+Evidence
+
 I created this project to demonstrate how a Security Architect approaches the design and review of an enterprise application before it is deployed into production.
 
 Rather than focusing on a single security tool, the project follows the complete security architecture lifecycle—from understanding business requirements through to architecture design, threat modelling, risk assessment, security controls, and validation.
@@ -40,100 +60,94 @@ This assessment includes:
 ## Repository structure
 
 ```text
-enterprise-security-architecture-project/
-│
-├── README.md
-│
+ENTERPRISE-SECURITY-ARCHITECTURE-PROJECT
 ├── 01-Architecture
-│   ├── README.md
-│   ├── Design-Documents
-│   │   ├── Business-Requirements.md
-│   │   ├── Security-Objectives.md
-│   │   ├── Deployment-Model.md
-│   │   ├── Security-Requirements.md
-│   │   ├── Trust-Boundaries.md
-│   │   └── Technology-Selection.md
-│   │
 │   ├── Architecture-Decisions
 │   │   └── ADR-001-Deployment-Model.md
-│   │
-│   └── Diagrams
-│       ├── High-Level-Architecture.drawio
-│       ├── High-Level-Architecture.png
-│       ├── Data-Flow-Diagram.drawio
-│       ├── Data-Flow-Diagram.png
-│       ├── Trust-Boundary.drawio
-│       └── Trust-Boundary.png
-│
+│   ├── Design-Documents
+│   │   ├── Business-Requirements.md
+│   │   ├── Deployment-Model.md
+│   │   ├── Security-Objectives.md
+│   │   ├── Security-Requirements.md
+│   │   ├── Technology-Selection.md
+│   │   └── Trust-Boundaries.md
+│   ├── Diagrams
+│   │   ├── Data-Flow-Diagram.drawio
+│   │   ├── Data-Flow-Diagram.png
+│   │   ├── High-Level-Architecture.drawio
+│   │   ├── High-Level-Architecture.png
+│   │   ├── Trust-Boundary.drawio
+│   │   └── Trust-Boundary.png
+│   └── README.md
 ├── 02-Threat-Model
-│   ├── README.md
+│   ├── Mitigation-Plan.md
 │   ├── STRIDE-Analysis.md
 │   ├── Threat-Modelling-Methodology.md
 │   └── Threat-Register.md
-│
 ├── 03-Risk-Assessment
+│   ├── Diagrams
+│   │   ├── Risk-Matrix.drawio
+│   │   └── Risk-Matrix.png
 │   ├── README.md
-│   ├── Risk-Assessment-Methodology.md
-│   ├── Risk-Register.md
 │   ├── Risk Treatment Plan.md
+│   ├── Risk-Assessment-Methodology.md
 │   ├── Risk-Matrix.md
-│   └── Diagrams
-│       ├── Risk-Matrix.drawio
-│       └── Risk-Matrix.png
-│
+│   └── Risk-Register.md
 ├── 04-Security-Controls
-│   ├── README.md
-│   ├── Identity-and-Access-Management.md
-│   ├── Data-Protection.md
-│   ├── Network-Security.md
 │   ├── Application-Security.md
-│   ├── Logging-and-Monitoring.md
+│   ├── Architecture-Control-Summary.md
 │   ├── Availability-and-Resilience.md
-│   ├── Security-Control-Matrix.md
-│   └── Architecture-Control-Summary.md
-│
-├── 05-Validation
+│   ├── Data-Protection.md
+│   ├── Identity-and-Access-Management.md
+│   ├── Logging-and-Monitoring.md
+│   ├── Network-Security.md
 │   ├── README.md
-│   ├── Validation-Strategy.md
+│   └── Security-Control-Matrix.md
+├── 05-Validation
+│   ├── Diagrams
+│   │   ├── Validation-Process.drawio
+│   │   └── Validation-Process.png
+│   ├── Reports
+│   │   ├── Lynis.md
+│   │   ├── Nikto scanning.png
+│   │   └── Nmap scan.png
+│   ├── Configuration-Review.md
+│   ├── Penetration-Testing.md
+│   ├── README.md
+│   ├── Security-Control-Validation.md
 │   ├── Security-Test-Cases.md
 │   ├── Validation-Checklist.md
-│   ├── Security-Control-Validation.md
-│   ├── Vulnerability-Assessment.md
-│   ├── Penetration-Testing.md
-│   ├── Configuration-Review.md
+│   ├── Validation-Strategy.md
 │   ├── Validation-Summary.md
-│   ├── Diagrams
-│   │   └── Validation-Workflow.drawio
-│   └── Reports
-│       ├── Nmap-Scan.md
-│       ├── OWASP-ZAP.md
-│       ├── Nikto.md
-│       └── Lynis.md
-│
+│   └── Vulnerability-Assessment.md
 ├── 06-Implementation
-│   ├── README.md
 │   ├── Environment-Preparation.md
-│   ├── Ubuntu-Hardening.md
-│   ├── PostgreSQL-Configuration.md
+│   ├── Firewall-Configuration.md          ← Added
+│   ├── HTTPS-TLS-Configuration.md
+│   ├── Nextcloud-Configuration.md
+│   ├── Nextcloud-Hardening.md
+│   ├── Nextcloud-Installation.md
 │   ├── Nginx-Configuration.md
 │   ├── PHP-Configuration.md
-│   ├── Nextcloud-Installation.md
-│   ├── SSL-TLS-Configuration.md
-│   ├── Firewall-Configuration.md
-│   ├── Fail2Ban-Configuration.md
-│   ├── Nextcloud-Hardening.md
-│   ├── Backup-and-Recovery.md
-│   ├── Scripts
-│   │   ├── backup.sh
-│   │   ├── restore.sh
-│   │   └── install-notes.md
-│   └── Configuration
-│       ├── nginx.conf
-│       ├── php.ini
-│       ├── nextcloud-config.php
-│       ├── ufw-rules.txt
-│       └── fail2ban-jail.local
-
+│   ├── PostgreSQL-Configuration.md
+│   ├── README.md
+│   ├── Ubuntu-Hardening.md
+│   ├── Firewall-Policy.png                ← Moved here
+│   └── UFW-HTTPS-Rule.png                 ← Moved here
+├── 07-Evidence
+│   ├── Errors-in-the-log.png
+│   ├── Least-Privilege.md
+│   ├── Least-Privilege.png
+│   ├── Nextcloud-Security-Overview.png
+│   ├── Nextcloud-setup-page.png
+│   ├── Nginx-Welcome-Page.png
+│   ├── README.md
+│   ├── resolved warnings.png
+│   ├── Security-Warnings.drawio
+│   ├── Security-Warnings.png
+│   └── TLS-Certificate-Details.png
+├── README.md
+└── Security-Standards-Mapping.md
 ```
 
 ---
